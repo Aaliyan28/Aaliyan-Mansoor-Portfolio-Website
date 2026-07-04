@@ -165,7 +165,7 @@ export const experience: Experience[] = [
   },
   {
     role: "Freelance Developer & Writer",
-    org: "Independent — clients in UAE, Portugal & Pakistan",
+    org: "Independent — clients in UAE, USA, Europe & Pakistan",
     period: "2022 – Present",
     location: "Remote",
     points: [
