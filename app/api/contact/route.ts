@@ -89,15 +89,26 @@ export async function POST(request: Request) {
           _captcha: "false",
         }),
       });
-      const json = await res.json().catch(() => null);
+      const text = await res.text();
+      let json: { success?: string; message?: string } | null = null;
+      try {
+        json = JSON.parse(text);
+      } catch {}
       if (!res.ok || !json || String(json.success) !== "true") {
-        throw new Error(json?.message || "FormSubmit relay failed");
+        throw new Error(
+          `relay status ${res.status}: ${(json?.message || text).slice(0, 300)}`
+        );
       }
     }
     return Response.json({ ok: true });
-  } catch {
+  } catch (err) {
+    console.error("contact form send failed:", err);
     return Response.json(
-      { error: "Could not send your message right now. Please try again later." },
+      {
+        error: "Could not send your message right now. Please try again later.",
+        // TODO: remove debug detail once relay issue is diagnosed
+        detail: err instanceof Error ? err.message.slice(0, 300) : "unknown",
+      },
       { status: 502 }
     );
   }
