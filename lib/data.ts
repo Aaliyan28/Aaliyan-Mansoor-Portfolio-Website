@@ -242,7 +242,7 @@ export const projects: Project[] = [
     slug: "whatsapp-chatbot",
     name: "WhatsApp Diamond Chatbot",
     subtitle: "Conversational Commerce Automation",
-    period: "2024",
+    period: "Dec 2025 – Feb 2026",
     description:
       "Automated WhatsApp chatbot for product inquiry and ordering flows — conversational commerce plumbed straight into a business's most-used channel.",
     stack: ["Node.js", "WhatsApp API", "Automation"],
