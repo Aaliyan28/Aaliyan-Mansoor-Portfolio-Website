@@ -104,7 +104,11 @@ export async function POST(request: Request) {
   } catch (err) {
     console.error("contact form send failed:", err);
     return Response.json(
-      { error: "Could not send your message right now. Please try again later." },
+      {
+        error: "Could not send your message right now. Please try again later.",
+        // TODO: remove debug detail after diagnosing production sending
+        detail: err instanceof Error ? err.message.slice(0, 300) : "unknown",
+      },
       { status: 502 }
     );
   }
