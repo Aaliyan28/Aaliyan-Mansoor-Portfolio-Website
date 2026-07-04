@@ -21,6 +21,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aaliyan-mansoor.vercel.app"),
   title: "Aaliyan Mansoor — Engineer · Researcher · Writer",
   description:
     "Computer Systems Engineer, full-stack developer, and published AI/Vision researcher. From FPGA-deployed machine vision to high-conversion web platforms and publication-ready writing.",
@@ -41,6 +42,13 @@ export const metadata: Metadata = {
       "From silicon to story: edge AI research, full-stack platforms, and published writing.",
     type: "website",
     locale: "en_US",
+    url: "https://aaliyan-mansoor.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aaliyan Mansoor — Engineer · Researcher · Writer",
+    description:
+      "From silicon to story: edge AI research, full-stack platforms, and published writing.",
   },
 };
 

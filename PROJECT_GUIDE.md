@@ -55,6 +55,7 @@ site/
 │   ├── page.tsx            # Home page: assembles all section components in order
 │   ├── globals.css         # ALL design tokens + Tailwind v4 theme + custom utilities
 │   ├── icon.svg            # Favicon ("AM." monogram, auto-served by Next)
+│   ├── opengraph-image.tsx # OG/Twitter share card, generated at build (next/og ImageResponse)
 │   └── api/contact/route.ts # Contact form endpoint (validation, anti-spam, email send)
 ├── components/             # One file per UI piece (see section 5)
 ├── lib/data.ts             # ★ SINGLE SOURCE OF TRUTH for all site content
